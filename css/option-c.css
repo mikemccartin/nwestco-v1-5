@@ -733,7 +733,7 @@
 .timeline {
   display: flex;
   justify-content: space-between;
-  align-items: center;
+  align-items: flex-start;
   margin: 3rem 0;
   position: relative;
 }
@@ -741,7 +741,7 @@
 .timeline::before {
   content: "";
   position: absolute;
-  top: 50%;
+  top: 30px; /* Center of 60px dots */
   left: 0;
   right: 0;
   height: 2px;
