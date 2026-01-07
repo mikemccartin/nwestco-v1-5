@@ -608,6 +608,29 @@
 
 
   /**
+   * ANNOUNCEMENT BANNER
+   */
+
+  function initAnnouncementBanner() {
+    const banner = document.getElementById('announcement-banner');
+    const closeBtn = banner ? banner.querySelector('.announcement-close') : null;
+
+    if (!banner || !closeBtn) return;
+
+    closeBtn.addEventListener('click', () => {
+      banner.style.display = 'none';
+      // Optionally save to sessionStorage so it stays closed during the session
+      sessionStorage.setItem('bannerClosed', 'true');
+    });
+
+    // Check if banner was previously closed in this session
+    if (sessionStorage.getItem('bannerClosed') === 'true') {
+      banner.style.display = 'none';
+    }
+  }
+
+
+  /**
    * INITIALIZE ALL
    */
 
@@ -615,6 +638,7 @@
     console.log('Initializing Option C interactive features...');
 
     // Core functionality
+    initAnnouncementBanner();
     initMobileMenu();
     initHeaderScroll();
     initSmoothScroll();
