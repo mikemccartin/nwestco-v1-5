@@ -26,6 +26,7 @@
   <script type="text/javascript" src="https://www.bugherd.com/sidebarv2.js?apikey=zb2b4odpfibiskidt9myaq" async="true"></script>
 </head>
 <body>
+  <div class="fabricated-page-banner" style="position: fixed; top: 0; left: 0; right: 0; z-index: 9999;">⚠️ ENTIRE PAGE FABRICATED - All projects, client names, and results on this page are placeholder content. Client must provide real case studies or remove this page.</div>
   <a href="#main-content" class="skip-nav">Skip to main content</a>
 
   <header class="site-header" role="banner">
@@ -305,6 +306,27 @@
       </div>
     </div>
   </footer>
+
+  <!-- Fabricated Content Legend for Client Review -->
+  <div class="fabricated-legend" id="fabricatedLegend">
+    <button class="legend-close" onclick="document.getElementById('fabricatedLegend').style.display='none'" aria-label="Close legend">&times;</button>
+    <h4>⚠️ Content Review Guide</h4>
+    <ul>
+      <li>
+        <span class="legend-swatch highlight"></span>
+        <span>Yellow highlight = Fabricated text that needs client content</span>
+      </li>
+      <li>
+        <span class="legend-swatch section"></span>
+        <span>Dashed border = Entire section is fabricated placeholder</span>
+      </li>
+      <li>
+        <span class="legend-swatch image"></span>
+        <span>Yellow border on images = Stock/placeholder imagery</span>
+      </li>
+    </ul>
+    <p style="margin-top: 1rem; font-size: 0.75rem; color: #666;">See <strong>nwestco-site-audit.md</strong> for full details</p>
+  </div>
 
   <script src="assets/js/main.js"></script>
   <script src="js/option-c.js"></script>

@@ -451,6 +451,27 @@
     </div>
   </footer>
 
+  <!-- Fabricated Content Legend for Client Review -->
+  <div class="fabricated-legend" id="fabricatedLegend">
+    <button class="legend-close" onclick="document.getElementById('fabricatedLegend').style.display='none'" aria-label="Close legend">&times;</button>
+    <h4>⚠️ Content Review Guide</h4>
+    <ul>
+      <li>
+        <span class="legend-swatch highlight"></span>
+        <span>Yellow highlight = Fabricated text that needs client content</span>
+      </li>
+      <li>
+        <span class="legend-swatch section"></span>
+        <span>Dashed border = Entire section is fabricated placeholder</span>
+      </li>
+      <li>
+        <span class="legend-swatch image"></span>
+        <span>Yellow border on images = Stock/placeholder imagery</span>
+      </li>
+    </ul>
+    <p style="margin-top: 1rem; font-size: 0.75rem; color: #666;">See <strong>nwestco-site-audit.md</strong> for full details</p>
+  </div>
+
   <script src="assets/js/main.js"></script>
   <script src="js/option-c.js"></script>
 </body>
