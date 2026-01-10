@@ -188,6 +188,170 @@
 
 
 /* ============================================================
+   DESKTOP HORIZONTAL NAVIGATION
+   ============================================================ */
+
+.desktop-nav {
+  display: none;
+}
+
+@media (min-width: 1025px) {
+  .desktop-nav {
+    display: flex;
+    align-items: center;
+    flex: 1;
+    justify-content: center;
+    margin: 0 2rem;
+  }
+
+  .nav-menu {
+    display: flex;
+    align-items: center;
+    gap: 0.25rem;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+  }
+
+  .nav-item {
+    position: relative;
+  }
+
+  .nav-link {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.375rem;
+    padding: 0.75rem 1rem;
+    font-size: 0.9375rem;
+    font-weight: var(--font-semibold);
+    color: var(--nwestco-neutral-700);
+    text-decoration: none;
+    background: none;
+    border: none;
+    cursor: pointer;
+    border-radius: var(--radius-base);
+    transition: color 0.2s ease, background-color 0.2s ease;
+    white-space: nowrap;
+    font-family: inherit;
+  }
+
+  .nav-link:hover,
+  .nav-link:focus {
+    color: var(--nwestco-blue);
+    background-color: var(--nwestco-blue-pale);
+  }
+
+  .nav-link:focus-visible {
+    outline: 2px solid var(--nwestco-blue);
+    outline-offset: 2px;
+  }
+
+  .dropdown-arrow {
+    transition: transform 0.2s ease;
+    flex-shrink: 0;
+  }
+
+  .nav-item.has-dropdown.open .dropdown-arrow {
+    transform: rotate(180deg);
+  }
+
+  /* Dropdown Menu */
+  .dropdown-menu {
+    position: absolute;
+    top: 100%;
+    left: 50%;
+    transform: translateX(-50%) translateY(10px);
+    min-width: 220px;
+    background: var(--nwestco-white);
+    border-radius: var(--radius-lg);
+    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.15), 0 2px 10px rgba(0, 0, 0, 0.1);
+    padding: 0.5rem 0;
+    list-style: none;
+    margin: 0;
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.2s ease, transform 0.2s ease, visibility 0.2s ease;
+    z-index: 500;
+    border: 1px solid var(--nwestco-neutral-100);
+  }
+
+  .dropdown-menu::before {
+    content: '';
+    position: absolute;
+    top: -8px;
+    left: 50%;
+    transform: translateX(-50%);
+    border-left: 8px solid transparent;
+    border-right: 8px solid transparent;
+    border-bottom: 8px solid var(--nwestco-white);
+  }
+
+  .nav-item.has-dropdown.open .dropdown-menu {
+    opacity: 1;
+    visibility: visible;
+    transform: translateX(-50%) translateY(0);
+  }
+
+  .dropdown-menu li {
+    margin: 0;
+  }
+
+  .dropdown-menu a {
+    display: block;
+    padding: 0.75rem 1.25rem;
+    color: var(--nwestco-neutral-700);
+    text-decoration: none;
+    font-size: 0.9375rem;
+    font-weight: var(--font-medium);
+    transition: background-color 0.15s ease, color 0.15s ease, padding-left 0.15s ease;
+  }
+
+  .dropdown-menu a:hover,
+  .dropdown-menu a:focus {
+    background-color: var(--nwestco-blue-pale);
+    color: var(--nwestco-blue);
+    padding-left: 1.5rem;
+  }
+
+  .dropdown-menu a:focus-visible {
+    outline: 2px solid var(--nwestco-blue);
+    outline-offset: -2px;
+  }
+
+  /* Hide hamburger on desktop when nav is visible */
+  .mobile-menu-toggle {
+    display: none;
+  }
+}
+
+/* Ensure mobile menu toggle shows on smaller screens */
+@media (max-width: 1024px) {
+  .desktop-nav {
+    display: none;
+  }
+
+  .mobile-menu-toggle {
+    display: flex;
+  }
+}
+
+/* Update menu-sections grid for 4 columns with Resources */
+@media (min-width: 768px) {
+  .menu-sections {
+    grid-template-columns: repeat(4, 1fr);
+  }
+}
+
+.menu-section:nth-child(4) h3 {
+  animation-delay: 0.4s;
+}
+
+.menu-section:nth-child(4) li {
+  animation-delay: 0.5s;
+}
+
+
+/* ============================================================
    FULL-SCREEN NAVIGATION MENU
    ============================================================ */
 
@@ -1503,12 +1667,21 @@
   color: var(--nwestco-white);
 }
 
-/* Contact Form Labels - ALWAYS WHITE on dark background (homepage contact section) */
+/* Contact Form Labels - WHITE on dark background sections (homepage) */
 .contact-section .form-group label,
 .contact-section label,
 .contact-section .contact-form-wrapper label,
 .contact-section .contact-form-wrapper .form-group label {
   color: #ffffff !important;
+  font-weight: var(--font-semibold);
+}
+
+/* Contact Form Labels - DARK on light background (contact.html page with --light modifier) */
+.contact-section--light label,
+.contact-section--light .form-group label,
+.contact-section--light .contact-form-wrapper label,
+.contact-section--light .contact-form-wrapper .form-group label {
+  color: var(--nwestco-neutral-700) !important;
   font-weight: var(--font-semibold);
 }
 
@@ -2170,4 +2343,357 @@
   .news-grid {
     grid-template-columns: 1fr;
   }
+}
+
+
+/* ============================================================
+   GREEN VIBRANCY ENHANCEMENTS
+   Added for color "pop" and green accents throughout the site
+   ============================================================ */
+
+
+/* ============================================================
+   TEXT ACCENT - Bold green for emphasis (Uptime-style)
+   ============================================================ */
+
+/* Bold green accent for emphasized words - accessible at 14px+ bold */
+.text-accent {
+  color: var(--nwestco-green-light);
+  font-weight: 700;
+}
+
+/* For dark backgrounds - bright green stands out */
+.hero-section .text-accent {
+  color: #9FBE6E;
+  text-shadow: 0 2px 8px rgba(0,0,0,0.5);
+}
+
+.cta-panel .text-accent {
+  color: #C5E09B;
+  text-shadow: 0 1px 3px rgba(0,0,0,0.3);
+}
+
+.project-overlay .text-accent {
+  color: #C5E09B;
+}
+
+/* Stat numbers get the accent treatment */
+.stat-number {
+  color: var(--nwestco-green) !important;
+}
+
+/* Flip card stat highlights */
+.stat-highlight {
+  color: var(--nwestco-green-light);
+  font-weight: 700;
+  font-size: 1.1rem;
+}
+
+
+/* ============================================================
+   HERO SECTION - Lighter overlays, text shadows for readability
+   ============================================================ */
+
+.hero-overlay {
+  background: linear-gradient(to bottom, rgba(0,0,0,0.1) 0%, rgba(0,0,0,0.25) 100%);
+}
+
+.hero-video-placeholder {
+  background: linear-gradient(135deg, rgba(37, 97, 124, 0.25) 0%, rgba(112, 153, 68, 0.2) 100%),
+              url('../assets/images/homepage-hero.png') center/cover no-repeat;
+}
+
+.hero-title {
+  text-shadow: 0 2px 8px rgba(0,0,0,0.7), 0 4px 20px rgba(0,0,0,0.5);
+}
+
+.hero-subtitle {
+  text-shadow: 0 2px 6px rgba(0,0,0,0.6);
+}
+
+
+/* ============================================================
+   ANNOUNCEMENT BANNER - Green badge
+   ============================================================ */
+
+.announcement-text strong {
+  color: var(--nwestco-white);
+  background: var(--nwestco-green);
+  padding: 0.2rem 0.5rem;
+  border-radius: 3px;
+  margin-right: 0.5rem;
+}
+
+
+/* ============================================================
+   PAIN POINTS SECTION - Green accent stripe
+   ============================================================ */
+
+.pain-points-section {
+  position: relative;
+}
+
+.pain-points-section::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 6px;
+  background: linear-gradient(90deg, var(--nwestco-green) 0%, var(--nwestco-green-light) 50%, var(--nwestco-green) 100%);
+}
+
+.flip-card-front {
+  border-top: 4px solid var(--nwestco-green-light);
+}
+
+.flip-card:hover .flip-card-front {
+  box-shadow: 0 0 30px rgba(112, 153, 68, 0.3);
+}
+
+
+/* ============================================================
+   MARKETS SECTION - Green-tinted background, lighter overlays
+   ============================================================ */
+
+.markets-section {
+  background: linear-gradient(180deg, var(--nwestco-green-pale) 0%, var(--nwestco-white) 100%);
+}
+
+.market-card {
+  border-top: 4px solid var(--nwestco-green);
+}
+
+.fuel-bg {
+  background: linear-gradient(135deg, rgba(37, 97, 124, 0.2) 0%, rgba(58, 122, 152, 0.25) 100%),
+              url('../assets/images/markets/fuel-systems-hero.png') center/cover no-repeat !important;
+}
+
+.carwash-bg {
+  background: linear-gradient(135deg, rgba(112, 153, 68, 0.2) 0%, rgba(143, 174, 94, 0.25) 100%),
+              url('../assets/images/markets/car-wash-hero.png') center/cover no-repeat !important;
+}
+
+.environmental-bg {
+  background: linear-gradient(135deg, rgba(37, 97, 124, 0.15) 0%, rgba(112, 153, 68, 0.2) 100%),
+              url('../assets/images/markets/environmental-hero.png') center/cover no-repeat !important;
+}
+
+.market-card-overlay {
+  text-shadow: 0 2px 6px rgba(0,0,0,0.6);
+}
+
+.market-card-overlay h3 {
+  text-shadow: 0 2px 8px rgba(0,0,0,0.7);
+}
+
+.market-card-overlay p,
+.market-card-overlay li {
+  text-shadow: 0 1px 4px rgba(0,0,0,0.5);
+}
+
+
+/* ============================================================
+   STATS SECTION - Blue-tinted background, accent bars
+   ============================================================ */
+
+.stats-section {
+  background: linear-gradient(180deg, var(--nwestco-white) 0%, var(--nwestco-blue-pale) 50%, var(--nwestco-white) 100%);
+}
+
+.stat-card {
+  position: relative;
+  padding-top: 2rem;
+}
+
+.stat-card::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 60px;
+  height: 4px;
+  background: linear-gradient(90deg, var(--nwestco-blue) 0%, var(--nwestco-green) 100%);
+  border-radius: 2px;
+}
+
+
+/* ============================================================
+   TIMELINE/LIFECYCLE - Green active state
+   ============================================================ */
+
+.timeline-dot.active {
+  background: var(--nwestco-green);
+  border-color: var(--nwestco-green);
+  color: var(--nwestco-white);
+  box-shadow: 0 0 0 4px rgba(112, 153, 68, 0.4);
+}
+
+.timeline-dot:hover {
+  background: var(--nwestco-green-light);
+  border-color: var(--nwestco-green-light);
+  color: var(--nwestco-white);
+}
+
+.timeline-detail {
+  border-left: 4px solid var(--nwestco-green);
+}
+
+
+/* ============================================================
+   TESTIMONIALS SECTION - Blue-tinted background
+   ============================================================ */
+
+.testimonials-section {
+  background: var(--nwestco-blue-pale);
+}
+
+/* Testimonial video placeholders use inline styles for images - no override needed */
+
+
+/* ============================================================
+   PROJECTS SECTION - Green hover accent, lighter overlays
+   ============================================================ */
+
+.project-card:hover .project-overlay {
+  background: linear-gradient(to top, rgba(112, 153, 68, 0.85) 0%, rgba(37, 97, 124, 0.75) 100%);
+}
+
+.project-overlay {
+  background: linear-gradient(to top, rgba(0,0,0,0.5) 0%, rgba(0,0,0,0.2) 50%, transparent 100%) !important;
+}
+
+.project-overlay h3,
+.project-overlay p {
+  text-shadow: 0 2px 6px rgba(0,0,0,0.7);
+}
+
+.project-card {
+  border-top: 4px solid transparent;
+  transition: border-color 0.3s ease;
+}
+
+.project-card:hover {
+  border-top-color: var(--nwestco-green);
+}
+
+
+/* ============================================================
+   BRAND LOGOS - Less muted
+   ============================================================ */
+
+.carousel-logo {
+  filter: grayscale(40%);
+  opacity: 0.8;
+}
+
+.carousel-logo:hover {
+  filter: grayscale(0%);
+  opacity: 1;
+}
+
+
+/* ============================================================
+   DUAL CTA SECTION - Enhanced gradients
+   ============================================================ */
+
+.cta-about {
+  background: linear-gradient(135deg, var(--nwestco-blue) 0%, #2d7a9a 50%, var(--nwestco-blue-dark) 100%);
+}
+
+.cta-careers {
+  background: linear-gradient(135deg, var(--nwestco-green) 0%, #82b050 50%, var(--nwestco-green-dark) 100%);
+}
+
+
+/* ============================================================
+   CONTACT SECTION - Green accents
+   ============================================================ */
+
+.contact-section .section-title::after {
+  content: '';
+  display: block;
+  width: 100px;
+  height: 4px;
+  background: var(--nwestco-green);
+  margin: 1rem auto 0;
+  border-radius: 2px;
+}
+
+
+/* ============================================================
+   BUTTONS - Enhanced with shadows
+   ============================================================ */
+
+.btn-primary {
+  box-shadow: 0 4px 14px rgba(37, 97, 124, 0.35);
+}
+
+.btn-primary:hover {
+  box-shadow: 0 6px 20px rgba(37, 97, 124, 0.45);
+  transform: translateY(-2px);
+}
+
+.btn-secondary {
+  box-shadow: 0 4px 14px rgba(112, 153, 68, 0.35);
+}
+
+.btn-secondary:hover {
+  box-shadow: 0 6px 20px rgba(112, 153, 68, 0.45);
+  transform: translateY(-2px);
+}
+
+
+/* ============================================================
+   NAV HOVER - Green underline accent
+   ============================================================ */
+
+@media (min-width: 1025px) {
+  .nav-link {
+    position: relative;
+  }
+
+  .nav-link::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    width: 0;
+    height: 3px;
+    background: var(--nwestco-green);
+    transition: all 0.3s ease;
+    transform: translateX(-50%);
+  }
+
+  .nav-link:hover::after,
+  .nav-item.has-dropdown.open .nav-link::after {
+    width: 80%;
+  }
+
+  .dropdown-menu a:hover,
+  .dropdown-menu a:focus {
+    background-color: var(--nwestco-green-pale);
+    color: var(--nwestco-green-dark);
+    border-left: 3px solid var(--nwestco-green);
+    padding-left: calc(1rem - 3px);
+  }
+}
+
+
+/* ============================================================
+   WHY NWESTCO SECTION - Green numbered headings
+   ============================================================ */
+
+.unique-item h3::first-letter {
+  color: var(--nwestco-green-light);
+}
+
+
+/* ============================================================
+   CHECKMARKS - Brighter green
+   ============================================================ */
+
+.check-list li::before {
+  color: var(--nwestco-green-light);
 }

@@ -1,0 +1,373 @@
+/**
+ * NWESTCO GREEN VIBRANCY MOCKUP
+ *
+ * Override styles to add more color "pop" and green accents.
+ * This file layers on top of option-c.css for preview purposes.
+ */
+
+
+/* ============================================================
+   0. GREEN TEXT ACCENT - The "Pop" Treatment
+   ============================================================ */
+
+/* Bold green accent for emphasized words - accessible at 14px+ bold */
+.text-accent {
+  color: var(--nwestco-green-light);
+  font-weight: 700;
+}
+
+/* For dark backgrounds - bright green stands out */
+.hero-section .text-accent {
+  color: #9FBE6E; /* Brighter green for dark hero background */
+  text-shadow: 0 2px 8px rgba(0,0,0,0.5);
+}
+
+.cta-panel .text-accent {
+  color: #C5E09B; /* Even brighter for the dark CTA panels */
+  text-shadow: 0 1px 3px rgba(0,0,0,0.3);
+}
+
+/* Project cards on hover - green accent visible */
+.project-overlay .text-accent {
+  color: #C5E09B;
+}
+
+/* Stat numbers get the accent treatment */
+.stat-number {
+  color: var(--nwestco-green) !important;
+}
+
+/* Flip card stat highlights */
+.stat-highlight {
+  color: var(--nwestco-green-light);
+  font-weight: 700;
+  font-size: 1.1rem;
+}
+
+
+/* ============================================================
+   1. HERO SECTION - Much lighter overlays, text shadows for readability
+   ============================================================ */
+
+.hero-overlay {
+  background: linear-gradient(to bottom, rgba(0,0,0,0.1) 0%, rgba(0,0,0,0.25) 100%);
+}
+
+.hero-video-placeholder {
+  background: linear-gradient(135deg, rgba(37, 97, 124, 0.25) 0%, rgba(112, 153, 68, 0.2) 100%),
+              url('../assets/images/homepage-hero.png') center/cover no-repeat;
+}
+
+/* Stronger text shadows for hero readability */
+.hero-title {
+  text-shadow: 0 2px 8px rgba(0,0,0,0.7), 0 4px 20px rgba(0,0,0,0.5);
+}
+
+.hero-subtitle {
+  text-shadow: 0 2px 6px rgba(0,0,0,0.6);
+}
+
+
+/* ============================================================
+   2. ANNOUNCEMENT BANNER - Green badge
+   ============================================================ */
+
+.announcement-text strong {
+  color: var(--nwestco-white);
+  background: var(--nwestco-green);
+  padding: 0.2rem 0.5rem;
+  border-radius: 3px;
+  margin-right: 0.5rem;
+}
+
+
+/* ============================================================
+   3. PAIN POINTS SECTION - Green accent stripe
+   ============================================================ */
+
+.pain-points-section {
+  position: relative;
+}
+
+.pain-points-section::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 6px;
+  background: linear-gradient(90deg, var(--nwestco-green) 0%, var(--nwestco-green-light) 50%, var(--nwestco-green) 100%);
+}
+
+/* Flip card green top border */
+.flip-card-front {
+  border-top: 4px solid var(--nwestco-green-light);
+}
+
+.flip-card:hover .flip-card-front {
+  box-shadow: 0 0 30px rgba(112, 153, 68, 0.3);
+}
+
+
+/* ============================================================
+   4. MARKETS SECTION - Green-tinted background
+   ============================================================ */
+
+.markets-section {
+  background: linear-gradient(180deg, var(--nwestco-green-pale) 0%, var(--nwestco-white) 100%);
+}
+
+/* Market cards - green top border */
+.market-card {
+  border-top: 4px solid var(--nwestco-green);
+}
+
+/* Much lighter image overlays - let photos shine */
+.fuel-bg {
+  background: linear-gradient(135deg, rgba(37, 97, 124, 0.2) 0%, rgba(58, 122, 152, 0.25) 100%),
+              url('../assets/images/markets/fuel-systems-hero.png') center/cover no-repeat !important;
+}
+
+.carwash-bg {
+  background: linear-gradient(135deg, rgba(112, 153, 68, 0.2) 0%, rgba(143, 174, 94, 0.25) 100%),
+              url('../assets/images/markets/car-wash-hero.png') center/cover no-repeat !important;
+}
+
+.environmental-bg {
+  background: linear-gradient(135deg, rgba(37, 97, 124, 0.15) 0%, rgba(112, 153, 68, 0.2) 100%),
+              url('../assets/images/markets/environmental-hero.png') center/cover no-repeat !important;
+}
+
+/* Market card text readability */
+.market-card-overlay {
+  text-shadow: 0 2px 6px rgba(0,0,0,0.6);
+}
+
+.market-card-overlay h3 {
+  text-shadow: 0 2px 8px rgba(0,0,0,0.7);
+}
+
+.market-card-overlay p,
+.market-card-overlay li {
+  text-shadow: 0 1px 4px rgba(0,0,0,0.5);
+}
+
+
+/* ============================================================
+   5. STATS SECTION - Alternating blue/green numbers
+   ============================================================ */
+
+.stats-section {
+  background: linear-gradient(180deg, var(--nwestco-white) 0%, var(--nwestco-blue-pale) 50%, var(--nwestco-white) 100%);
+}
+
+/* Stat card accent bar */
+.stat-card {
+  position: relative;
+  padding-top: 2rem;
+}
+
+.stat-card::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 60px;
+  height: 4px;
+  background: linear-gradient(90deg, var(--nwestco-blue) 0%, var(--nwestco-green) 100%);
+  border-radius: 2px;
+}
+
+/* Alternate stat numbers: 2nd and 4th are green */
+.stat-card:nth-child(2) .stat-number,
+.stat-card:nth-child(4) .stat-number {
+  color: var(--nwestco-green);
+}
+
+
+/* ============================================================
+   6. TIMELINE/LIFECYCLE - Green active state
+   ============================================================ */
+
+.timeline-dot.active {
+  background: var(--nwestco-green);
+  border-color: var(--nwestco-green);
+  color: var(--nwestco-white);
+  box-shadow: 0 0 0 4px rgba(112, 153, 68, 0.4);
+}
+
+.timeline-dot:hover {
+  background: var(--nwestco-green-light);
+  border-color: var(--nwestco-green-light);
+  color: var(--nwestco-white);
+}
+
+/* Timeline detail card green accent */
+.timeline-detail {
+  border-left: 4px solid var(--nwestco-green);
+}
+
+
+/* ============================================================
+   7. TESTIMONIALS SECTION - Blue-tinted background + lighter video overlays
+   ============================================================ */
+
+.testimonials-section {
+  background: var(--nwestco-blue-pale);
+}
+
+/* Lighter video placeholder overlays */
+.testimonial-video .video-placeholder {
+  background: linear-gradient(135deg, rgba(37, 97, 124, 0.15) 0%, rgba(58, 122, 152, 0.2) 100%),
+              url('') center/cover no-repeat !important;
+}
+
+
+/* ============================================================
+   8. PROJECTS SECTION - Green hover accent
+   ============================================================ */
+
+.project-card:hover .project-overlay {
+  background: linear-gradient(to top, rgba(112, 153, 68, 0.85) 0%, rgba(37, 97, 124, 0.75) 100%);
+}
+
+/* Project card default state - much lighter */
+.project-overlay {
+  background: linear-gradient(to top, rgba(0,0,0,0.5) 0%, rgba(0,0,0,0.2) 50%, transparent 100%) !important;
+}
+
+.project-overlay h3,
+.project-overlay p {
+  text-shadow: 0 2px 6px rgba(0,0,0,0.7);
+}
+
+.project-card {
+  border-top: 4px solid transparent;
+  transition: border-color 0.3s ease;
+}
+
+.project-card:hover {
+  border-top-color: var(--nwestco-green);
+}
+
+
+/* ============================================================
+   9. BRAND LOGOS - Less muted
+   ============================================================ */
+
+.carousel-logo {
+  filter: grayscale(40%);
+  opacity: 0.8;
+}
+
+.carousel-logo:hover {
+  filter: grayscale(0%);
+  opacity: 1;
+}
+
+
+/* ============================================================
+   10. DUAL CTA SECTION - Enhanced gradients
+   ============================================================ */
+
+.cta-about {
+  background: linear-gradient(135deg, var(--nwestco-blue) 0%, #2d7a9a 50%, var(--nwestco-blue-dark) 100%);
+}
+
+.cta-careers {
+  background: linear-gradient(135deg, var(--nwestco-green) 0%, #82b050 50%, var(--nwestco-green-dark) 100%);
+}
+
+
+/* ============================================================
+   11. CONTACT SECTION - Green accents
+   ============================================================ */
+
+.contact-section .section-title::after {
+  content: '';
+  display: block;
+  width: 100px;
+  height: 4px;
+  background: var(--nwestco-green);
+  margin: 1rem auto 0;
+  border-radius: 2px;
+}
+
+
+/* ============================================================
+   12. BUTTONS - Enhanced with shadows
+   ============================================================ */
+
+.btn-primary {
+  box-shadow: 0 4px 14px rgba(37, 97, 124, 0.35);
+}
+
+.btn-primary:hover {
+  box-shadow: 0 6px 20px rgba(37, 97, 124, 0.45);
+  transform: translateY(-2px);
+}
+
+.btn-secondary {
+  box-shadow: 0 4px 14px rgba(112, 153, 68, 0.35);
+}
+
+.btn-secondary:hover {
+  box-shadow: 0 6px 20px rgba(112, 153, 68, 0.45);
+  transform: translateY(-2px);
+}
+
+
+/* ============================================================
+   13. NAV HOVER - Green underline accent
+   ============================================================ */
+
+@media (min-width: 1025px) {
+  .nav-link {
+    position: relative;
+  }
+
+  .nav-link::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    width: 0;
+    height: 3px;
+    background: var(--nwestco-green);
+    transition: all 0.3s ease;
+    transform: translateX(-50%);
+  }
+
+  .nav-link:hover::after,
+  .nav-item.has-dropdown.open .nav-link::after {
+    width: 80%;
+  }
+
+  /* Dropdown hover - green accent */
+  .dropdown-menu a:hover,
+  .dropdown-menu a:focus {
+    background-color: var(--nwestco-green-pale);
+    color: var(--nwestco-green-dark);
+    border-left: 3px solid var(--nwestco-green);
+    padding-left: calc(1rem - 3px);
+  }
+}
+
+
+/* ============================================================
+   14. WHY NWESTCO SECTION - Green numbered headings
+   ============================================================ */
+
+.unique-item h3::first-letter {
+  color: var(--nwestco-green-light);
+}
+
+
+/* ============================================================
+   15. CHECKMARKS - Brighter green
+   ============================================================ */
+
+.check-list li::before {
+  color: var(--nwestco-green-light);
+}

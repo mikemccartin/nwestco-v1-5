@@ -3,8 +3,8 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="Nwestco branch locations across the Western US. 9 branches in Washington, Oregon, Idaho, Montana, California, and Arkansas.">
-  <title>Branch Locations | 9 Locations Across Western US | Nwestco</title>
+  <meta name="description" content="Nwestco branch locations across the US. 19 branches in 12 states.">
+  <title>Branch Locations | 19 Locations Across 12 States | Nwestco</title>
   <!-- Favicon & Icons -->
   <link rel="icon" type="image/x-icon" href="assets/icons/favicon.ico">
   <link rel="icon" type="image/png" sizes="32x32" href="assets/icons/favicon-32x32.png">
@@ -34,10 +34,78 @@
         <div class="header-logo">
           <a href="index.html"><img src="assets/logos/nwestco_logo_flat.png" alt="Nwestco" class="logo"></a>
         </div>
+
+        <!-- Desktop Horizontal Navigation -->
+        <nav class="desktop-nav" aria-label="Main navigation">
+          <ul class="nav-menu">
+            <li class="nav-item has-dropdown">
+              <button class="nav-link" aria-haspopup="true" aria-expanded="false">
+                Markets
+                <svg class="dropdown-arrow" width="10" height="6" viewBox="0 0 10 6" fill="none" stroke="currentColor" stroke-width="2">
+                  <polyline points="1 1 5 5 9 1"></polyline>
+                </svg>
+              </button>
+              <ul class="dropdown-menu">
+                <li><a href="markets/fuel-systems.html">Fuel Systems</a></li>
+                <li><a href="markets/car-wash.html">Car Wash</a></li>
+                <li><a href="markets/environmental.html">Environmental</a></li>
+              </ul>
+            </li>
+
+            <li class="nav-item has-dropdown">
+              <button class="nav-link" aria-haspopup="true" aria-expanded="false">
+                Services
+                <svg class="dropdown-arrow" width="10" height="6" viewBox="0 0 10 6" fill="none" stroke="currentColor" stroke-width="2">
+                  <polyline points="1 1 5 5 9 1"></polyline>
+                </svg>
+              </button>
+              <ul class="dropdown-menu">
+                <li><a href="services/design-engineering.html">Design & Engineering</a></li>
+                <li><a href="services/installation.html">Installation</a></li>
+                <li><a href="services/service-maintenance.html">Service & Maintenance</a></li>
+                <li><a href="services/remodels-upgrades.html">Remodels & Upgrades</a></li>
+                <li><a href="services/equipment-parts.html">Equipment Sales & Parts</a></li>
+                <li><a href="services/testing-compliance.html">Testing & Compliance</a></li>
+                <li><a href="services/training.html">Training</a></li>
+              </ul>
+            </li>
+
+            <li class="nav-item has-dropdown">
+              <button class="nav-link" aria-haspopup="true" aria-expanded="false">
+                About
+                <svg class="dropdown-arrow" width="10" height="6" viewBox="0 0 10 6" fill="none" stroke="currentColor" stroke-width="2">
+                  <polyline points="1 1 5 5 9 1"></polyline>
+                </svg>
+              </button>
+              <ul class="dropdown-menu">
+                <li><a href="about.html">Why Nwestco</a></li>
+                <li><a href="careers.html">Careers</a></li>
+                <li><a href="contact.html">Contact</a></li>
+              </ul>
+            </li>
+
+            <li class="nav-item has-dropdown">
+              <button class="nav-link" aria-haspopup="true" aria-expanded="false">
+                Resources
+                <svg class="dropdown-arrow" width="10" height="6" viewBox="0 0 10 6" fill="none" stroke="currentColor" stroke-width="2">
+                  <polyline points="1 1 5 5 9 1"></polyline>
+                </svg>
+              </button>
+              <ul class="dropdown-menu">
+                <li><a href="financing.html">Financing</a></li>
+                <li><a href="locations.html">Branches</a></li>
+                <li><a href="projects.html">Projects</a></li>
+                <li><a href="news.html">News</a></li>
+              </ul>
+            </li>
+          </ul>
+        </nav>
+
         <div class="header-actions">
           <a href="contact.html" class="btn btn-primary">Get Service Now</a>
           <a href="tel:8007751892" class="btn btn-outline">800-775-1892</a>
         </div>
+
         <button class="mobile-menu-toggle" aria-expanded="false" aria-label="Toggle navigation menu">
           <span class="hamburger"></span>
           <span class="hamburger"></span>
@@ -81,7 +149,7 @@
           <ul>
             <li><a href="services/design-engineering.html">Design & Engineering</a></li>
             <li><a href="services/installation.html">Installation & Construction</a></li>
-            <li><a href="services/service-maintenance.html">24/7 Service & Maintenance</a></li>
+            <li><a href="services/service-maintenance.html"><span class="text-accent">24/7</span> Service & Maintenance</a></li>
             <li><a href="services/remodels-upgrades.html">Remodels & Upgrades</a></li>
             <li><a href="services/equipment-parts.html">Equipment Sales & Parts</a></li>
             <li><a href="services/testing-compliance.html">Testing & Compliance</a></li>
@@ -96,10 +164,20 @@
             <li><a href="contact.html">Contact</a></li>
           </ul>
         </div>
+
+        <div class="menu-section">
+          <h3>Resources</h3>
+          <ul>
+            <li><a href="financing.html">Financing</a></li>
+            <li><a href="locations.html">Branches</a></li>
+            <li><a href="projects.html">Projects</a></li>
+            <li><a href="news.html">News</a></li>
+          </ul>
+        </div>
       </div>
       <div class="menu-cta">
         <a href="contact.html" class="btn btn-primary btn-lg">Get Service Now</a>
-        <a href="tel:8007751892" class="phone-link">24/7: 800-775-1892</a>
+        <a href="tel:8007751892" class="phone-link"><span class="text-accent">24/7</span>: 800-775-1892</a>
       </div>
     </div>
   </nav>
@@ -107,7 +185,7 @@
   <main id="main-content" role="main">
     <section class="hero-section" style="min-height: 50vh;">
       <div class="hero-background">
-        <div class="hero-video-placeholder" style="background: linear-gradient(135deg, rgba(37, 97, 124, 0.8) 0%, rgba(26, 68, 86, 0.9) 100%);"></div>
+        <div class="hero-video-placeholder" style="background: linear-gradient(135deg, rgba(37, 97, 124, 0.15) 0%, rgba(26, 68, 86, 0.25) 100%);"></div>
         <div class="hero-overlay"></div>
       </div>
       <div class="container">
@@ -117,7 +195,7 @@
             <span class="hero-line fade-in-up" style="animation-delay: 0.6s">LOCATIONS</span>
           </h1>
           <p class="hero-subtitle fade-in-up" style="animation-delay: 1s">
-            9 branches across 6 Western states. Local service, regional strength.
+            <span class="text-accent">19</span> branches across <span class="text-accent">12</span> states. Local service, regional strength.
           </p>
         </div>
       </div>
@@ -128,35 +206,17 @@
         <h2 class="section-title">Branch Locations</h2>
 
         <div class="markets-grid">
-          <!-- Kalispell, MT -->
+          <!-- Bakersfield, CA -->
           <div class="market-card">
             <div class="market-card-image">
-              <img src="assets/images/locations/kalispell-montana.png" alt="Flathead Lake near Kalispell, Montana" style="width: 100%; height: 100%; object-fit: cover;">
+              <img src="assets/images/locations/bakersfield-california.png" alt="Bakersfield, California landscape" style="width: 100%; height: 100%; object-fit: cover;">
             </div>
             <div class="market-card-overlay">
-              <h3>KALISPELL, MT</h3>
-              <p>Corporate Headquarters</p>
+              <h3>BAKERSFIELD, CA</h3>
+              <p>Kern County & Southern Central Valley</p>
               <ul class="service-list">
-                <li>Toll Free: 800-775-1892</li>
-                <li>Local: 406-755-4343</li>
-                <li>Fax: 406-755-4582</li>
-              </ul>
-              <a href="contact.html" class="btn btn-ghost">Contact</a>
-            </div>
-          </div>
-
-          <!-- Spokane, WA -->
-          <div class="market-card">
-            <div class="market-card-image">
-              <img src="assets/images/locations/spokane-washington.png" alt="Spokane, Washington cityscape" style="width: 100%; height: 100%; object-fit: cover;">
-            </div>
-            <div class="market-card-overlay">
-              <h3>SPOKANE, WA</h3>
-              <p>Training Center & Eastern Washington</p>
-              <ul class="service-list">
-                <li>Toll Free: 888-747-7560</li>
-                <li>Local: 509-534-3206</li>
-                <li>Fax: 509-534-3358</li>
+                <li>Toll Free: 800-339-9930</li>
+                <li>Local: 661-631-3870</li>
               </ul>
               <a href="contact.html" class="btn btn-ghost">Contact</a>
             </div>
@@ -196,18 +256,46 @@
             </div>
           </div>
 
-          <!-- Portland, OR -->
+          <!-- Denver, CO -->
           <div class="market-card">
             <div class="market-card-image">
-              <img src="assets/images/locations/portland-oregon.png" alt="Portland, Oregon skyline with Mt. Hood" style="width: 100%; height: 100%; object-fit: cover;">
+              <img src="assets/images/locations/denver-colorado.png" alt="Denver, Colorado skyline with Rocky Mountains" style="width: 100%; height: 100%; object-fit: cover;">
             </div>
             <div class="market-card-overlay">
-              <h3>PORTLAND, OR</h3>
-              <p>Training Center & Western Oregon</p>
+              <h3>DENVER, CO</h3>
+              <p>Colorado & Rocky Mountain Region</p>
               <ul class="service-list">
-                <li>Toll Free: 800-262-3369</li>
-                <li>Local: 503-254-9455</li>
-                <li>Fax: 503-254-9481</li>
+                <li>Local: 303-825-8117</li>
+              </ul>
+              <a href="contact.html" class="btn btn-ghost">Contact</a>
+            </div>
+          </div>
+
+          <!-- Dublin, CA -->
+          <div class="market-card">
+            <div class="market-card-image">
+              <img src="assets/images/locations/dublin-california.png" alt="Dublin, California Bay Area" style="width: 100%; height: 100%; object-fit: cover;">
+            </div>
+            <div class="market-card-overlay">
+              <h3>DUBLIN, CA</h3>
+              <p>East Bay & Tri-Valley</p>
+              <ul class="service-list">
+                <li>Local: 925-551-7555</li>
+              </ul>
+              <a href="contact.html" class="btn btn-ghost">Contact</a>
+            </div>
+          </div>
+
+          <!-- Fort Smith, AR -->
+          <div class="market-card">
+            <div class="market-card-image">
+              <img src="assets/images/locations/fort-smith-arkansas.png" alt="Fort Smith, Arkansas" style="width: 100%; height: 100%; object-fit: cover;">
+            </div>
+            <div class="market-card-overlay">
+              <h3>FORT SMITH, AR</h3>
+              <p>Western Arkansas & Eastern Oklahoma</p>
+              <ul class="service-list">
+                <li>Local: 479-206-3373</li>
               </ul>
               <a href="contact.html" class="btn btn-ghost">Contact</a>
             </div>
@@ -229,33 +317,143 @@
             </div>
           </div>
 
-          <!-- Bakersfield, CA -->
+          <!-- Gilroy, CA -->
           <div class="market-card">
             <div class="market-card-image">
-              <img src="assets/images/locations/kern-county-california.png" alt="Kern County California landscape" style="width: 100%; height: 100%; object-fit: cover;">
+              <img src="assets/images/locations/gilroy-california.png" alt="Gilroy, California agricultural landscape" style="width: 100%; height: 100%; object-fit: cover;">
             </div>
             <div class="market-card-overlay">
-              <h3>BAKERSFIELD, CA</h3>
-              <p>Kern County & Southern Central Valley</p>
+              <h3>GILROY, CA</h3>
+              <p>South Bay & Santa Clara Valley</p>
               <ul class="service-list">
-                <li>Toll Free: 800-339-9930</li>
-                <li>Local: 661-631-3870</li>
+                <li>Local: 669-200-0678</li>
               </ul>
               <a href="contact.html" class="btn btn-ghost">Contact</a>
             </div>
           </div>
 
-          <!-- San Jose, CA -->
+          <!-- Kalispell, MT -->
           <div class="market-card">
             <div class="market-card-image">
-              <img src="assets/images/locations/san-jose-california.png" alt="San Jose, California Silicon Valley" style="width: 100%; height: 100%; object-fit: cover;">
+              <img src="assets/images/locations/kalispell-montana.png" alt="Flathead Lake near Kalispell, Montana" style="width: 100%; height: 100%; object-fit: cover;">
             </div>
             <div class="market-card-overlay">
-              <h3>SAN JOSE, CA</h3>
-              <p>Bay Area & Silicon Valley</p>
+              <h3>KALISPELL, MT</h3>
+              <p>Corporate Headquarters</p>
               <ul class="service-list">
-                <li>Toll Free: 800-339-9930</li>
-                <li>Local: 669-200-0678</li>
+                <li>Toll Free: 800-775-1892</li>
+                <li>Local: 406-755-4343</li>
+                <li>Fax: 406-755-4582</li>
+              </ul>
+              <a href="contact.html" class="btn btn-ghost">Contact</a>
+            </div>
+          </div>
+
+          <!-- Las Vegas, NV -->
+          <div class="market-card">
+            <div class="market-card-image">
+              <img src="assets/images/locations/las-vegas-nevada.png" alt="Las Vegas, Nevada skyline" style="width: 100%; height: 100%; object-fit: cover;">
+            </div>
+            <div class="market-card-overlay">
+              <h3>LAS VEGAS, NV</h3>
+              <p>Training Center & Southern Nevada</p>
+              <ul class="service-list">
+                <li>Local: 702-641-3127</li>
+              </ul>
+              <a href="contact.html" class="btn btn-ghost">Contact</a>
+            </div>
+          </div>
+
+          <!-- Portland, OR -->
+          <div class="market-card">
+            <div class="market-card-image">
+              <img src="assets/images/locations/portland-oregon.png" alt="Portland, Oregon skyline with Mt. Hood" style="width: 100%; height: 100%; object-fit: cover;">
+            </div>
+            <div class="market-card-overlay">
+              <h3>PORTLAND, OR</h3>
+              <p>Training Center & Western Oregon</p>
+              <ul class="service-list">
+                <li>Toll Free: 800-262-3369</li>
+                <li>Local: 503-254-9455</li>
+                <li>Fax: 503-254-9481</li>
+              </ul>
+              <a href="contact.html" class="btn btn-ghost">Contact</a>
+            </div>
+          </div>
+
+          <!-- Reno, NV -->
+          <div class="market-card">
+            <div class="market-card-image">
+              <img src="assets/images/locations/reno-nevada.png" alt="Reno, Nevada with Sierra Nevada mountains" style="width: 100%; height: 100%; object-fit: cover;">
+            </div>
+            <div class="market-card-overlay">
+              <h3>RENO, NV</h3>
+              <p>Northern Nevada & Lake Tahoe</p>
+              <ul class="service-list">
+                <li>Local: 702-641-3127</li>
+              </ul>
+              <a href="contact.html" class="btn btn-ghost">Contact</a>
+            </div>
+          </div>
+
+          <!-- Sacramento, CA -->
+          <div class="market-card">
+            <div class="market-card-image">
+              <img src="assets/images/locations/sacramento-california.png" alt="Sacramento, California State Capitol" style="width: 100%; height: 100%; object-fit: cover;">
+            </div>
+            <div class="market-card-overlay">
+              <h3>SACRAMENTO, CA</h3>
+              <p>Capital Region & Northern California</p>
+              <ul class="service-list">
+                <li>Local: 916-851-1830</li>
+              </ul>
+              <a href="contact.html" class="btn btn-ghost">Contact</a>
+            </div>
+          </div>
+
+          <!-- Seattle, WA -->
+          <div class="market-card">
+            <div class="market-card-image">
+              <img src="assets/images/locations/seattle-washington.png" alt="Seattle, Washington skyline with Space Needle" style="width: 100%; height: 100%; object-fit: cover;">
+            </div>
+            <div class="market-card-overlay">
+              <h3>SEATTLE, WA</h3>
+              <p>Puget Sound & Western Washington</p>
+              <ul class="service-list">
+                <li>Toll Free: 800-262-3369</li>
+                <li>Local: 503-254-9455</li>
+              </ul>
+              <a href="contact.html" class="btn btn-ghost">Contact</a>
+            </div>
+          </div>
+
+          <!-- Spokane, WA -->
+          <div class="market-card">
+            <div class="market-card-image">
+              <img src="assets/images/locations/spokane-washington.png" alt="Spokane, Washington cityscape" style="width: 100%; height: 100%; object-fit: cover;">
+            </div>
+            <div class="market-card-overlay">
+              <h3>SPOKANE, WA</h3>
+              <p>Training Center & Eastern Washington</p>
+              <ul class="service-list">
+                <li>Toll Free: 888-747-7560</li>
+                <li>Local: 509-534-3206</li>
+                <li>Fax: 509-534-3358</li>
+              </ul>
+              <a href="contact.html" class="btn btn-ghost">Contact</a>
+            </div>
+          </div>
+
+          <!-- Spokane Enviro, WA -->
+          <div class="market-card">
+            <div class="market-card-image">
+              <img src="assets/images/locations/spokane-enviro-washington.png" alt="Spokane Falls, Washington" style="width: 100%; height: 100%; object-fit: cover;">
+            </div>
+            <div class="market-card-overlay">
+              <h3>SPOKANE ENVIRO, WA</h3>
+              <p>Environmental Services</p>
+              <ul class="service-list">
+                <li>Local: 509-466-5255</li>
               </ul>
               <a href="contact.html" class="btn btn-ghost">Contact</a>
             </div>
@@ -264,7 +462,7 @@
           <!-- Springdale, AR -->
           <div class="market-card">
             <div class="market-card-image">
-              <img src="assets/images/locations/ozark-arkansas.png" alt="Ozark Mountains Arkansas" style="width: 100%; height: 100%; object-fit: cover;">
+              <img src="assets/images/locations/springdale-arkansas.png" alt="Springdale, Arkansas Ozark Mountains" style="width: 100%; height: 100%; object-fit: cover;">
             </div>
             <div class="market-card-overlay">
               <h3>SPRINGDALE, AR</h3>
@@ -273,6 +471,21 @@
                 <li>Toll Free: 800-632-0031</li>
                 <li>Local: 479-756-6851</li>
                 <li>Fax: 479-756-6963</li>
+              </ul>
+              <a href="contact.html" class="btn btn-ghost">Contact</a>
+            </div>
+          </div>
+
+          <!-- St. George, UT -->
+          <div class="market-card">
+            <div class="market-card-image">
+              <img src="assets/images/locations/st-george-utah.png" alt="St. George, Utah red rock landscape" style="width: 100%; height: 100%; object-fit: cover;">
+            </div>
+            <div class="market-card-overlay">
+              <h3>ST. GEORGE, UT</h3>
+              <p>Southern Utah & Northern Arizona</p>
+              <ul class="service-list">
+                <li>Local: 435-634-9557</li>
               </ul>
               <a href="contact.html" class="btn btn-ghost">Contact</a>
             </div>
@@ -286,12 +499,12 @@
         <h2 class="section-title">Coverage You Can Count On</h2>
         <div class="stats-grid">
           <div class="stat-card">
-            <div class="stat-number">9</div>
+            <div class="stat-number">19</div>
             <div class="stat-label">BRANCHES</div>
-            <div class="stat-description">Across Western US</div>
+            <div class="stat-description">Across the US</div>
           </div>
           <div class="stat-card">
-            <div class="stat-number">6</div>
+            <div class="stat-number">12</div>
             <div class="stat-label">STATES</div>
             <div class="stat-description">And growing</div>
           </div>
@@ -342,7 +555,7 @@
             <ul>
               <li><a href="services/design-engineering.html">Design & Engineering</a></li>
               <li><a href="services/installation.html">Installation & Construction</a></li>
-              <li><a href="services/service-maintenance.html">24/7 Service & Maintenance</a></li>
+              <li><a href="services/service-maintenance.html"><span class="text-accent">24/7</span> Service & Maintenance</a></li>
               <li><a href="services/remodels-upgrades.html">Remodels & Upgrades</a></li>
               <li><a href="services/equipment-parts.html">Equipment Sales & Parts</a></li>
               <li><a href="services/testing-compliance.html">Testing & Compliance</a></li>
@@ -351,7 +564,7 @@
           </div>
 
           <div class="footer-column">
-            <h4>Company</h4>
+            <h4>About</h4>
             <ul>
               <li><a href="about.html">Why Nwestco</a></li>
               <li><a href="careers.html">Careers</a></li>
@@ -365,12 +578,13 @@
               <li><a href="locations.html">Branches</a></li>
               <li><a href="projects.html">Projects</a></li>
               <li><a href="news.html">News</a></li>
+              <li><a href="financing.html">Financing</a></li>
             </ul>
           </div>
         </div>
 
         <div class="footer-contact">
-          <p><strong>24/7 Emergency:</strong> <a href="tel:8007751892">800-775-1892</a></p>
+          <p><strong><span class="text-accent">24/7</span> Emergency:</strong> <a href="tel:8007751892">800-775-1892</a></p>
           <p><strong>Email:</strong> <a href="mailto:info@nwestco.com">info@nwestco.com</a></p>
         </div>
       </div>
