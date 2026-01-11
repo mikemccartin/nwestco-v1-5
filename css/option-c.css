@@ -1399,6 +1399,11 @@
   font-weight: inherit;
 }
 
+/* But keep text-accent green inside h3 headers */
+.project-overlay h3 .text-accent {
+  color: var(--nwestco-green-light);
+}
+
 .section-cta {
   text-align: center;
   margin-top: 3rem;
