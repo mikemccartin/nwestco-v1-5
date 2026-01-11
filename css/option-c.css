@@ -1262,9 +1262,10 @@
   line-height: var(--leading-relaxed);
 }
 
-/* Remove green accents from testimonial quotes - keep all text same color */
+/* Remove green accents from testimonial quotes - keep all text same color and weight */
 .testimonial-slide blockquote .text-accent {
   color: inherit;
+  font-weight: inherit;
 }
 
 .testimonial-slide footer {
