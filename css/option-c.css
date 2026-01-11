@@ -702,6 +702,19 @@
   font-weight: 700;
   margin-bottom: 0.75rem;
   letter-spacing: 0.025em;
+  color: var(--nwestco-green-light);
+}
+
+/* Override green accents on flip card fronts - keep all text white except headers */
+.flip-card-front .text-accent {
+  color: var(--nwestco-white);
+  font-weight: inherit;
+}
+
+.flip-card-front .stat-large,
+.flip-card-front .stat-large strong,
+.flip-card-front p {
+  color: var(--nwestco-white);
 }
 
 .stat-large {
